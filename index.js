@@ -23,7 +23,7 @@ connectTomongoDB("mongodb://localhost:27017/short-url")
 .then(()=> console.log("connected succesfully"));
 
 app.use(express.json());
-app.use(express.urlencoded({extended : false}))
+app.use(express.urlencoded({extended: false}))
 app.use("/url",urlRoute);  
 app.use("/",staticrout);
 app.get('/url/:shortid ',async (req,res)=>{
